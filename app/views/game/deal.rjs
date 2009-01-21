@@ -1,0 +1,7 @@
+page.replace_html 'cards', :partial => 'cards'
+page.replace_html 'score', @session[:hand].score
+
+page.replace_html 'dcards', "<img src=\"/images/deck/#{@session[:dhand].cards[0].face}.gif\" style=\"height:96px;width:71px;\" /> 
+									  <img src=\"/images/deck/blank.gif\" style=\"height:96px;width:71px;\" />"
+								
+page.replace_html 'dscore', @session[:dhand].score

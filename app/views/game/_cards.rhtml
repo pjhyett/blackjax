@@ -1,0 +1,3 @@
+<% for card in @session[:hand].cards %>
+<img src="/images/deck/<%= card.face %>.gif" style="height:96px;width:71px;" /> 
+<% end %>

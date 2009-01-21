@@ -1,0 +1,6 @@
+BlackJax install instructions
+
+1. mysqladmin create blackjax_development (may need to specify username & password)
+2. rake migrate
+3. ./script/server
+4. visit http://localhost:3000 and play!

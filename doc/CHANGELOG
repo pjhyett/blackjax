@@ -1,0 +1,52 @@
+BlackJax changelog
+------------------
+
+v.3.0
+-using unique urls to remember users instead of cookies, useful because:
+  * access account from any machine
+  * no worry about losing bankroll if cookie is deleted
+  * don't have to remember a password or setup a user account
+
+v.2.0.3
+-actually using bankrolls that were stored in cookie
+-freeze edge_rails unnecessary due to rails 1.1.2 release
+-rjs plugin removed because of rails 1.1
+-user accounts deemed overkill for blackjax, exploring individual urls
+ to remember players
+
+v.2.0
+-card selection redone to _finally_ eliminate duplicates
+-freeze edge_rails because Rails 1.1 isn't out yet
+-updated the RJS code with inline example
+-bankroll displayed with 2 digits
+-unnecessary frameworks excluded in environment.rb
+-bankroll stored in a cookie (creating user accounts to 
+ remember bankroll from any computer may be looked at later)
+
+v.1.9
+-entire game redesigned for use with RJS templates meaning:
+	*each button click now only uses one ajax call
+	*visual effects and updates are handled in the RJS files
+	*a lot less code that is easier to understand
+	*everything is much faster
+-winner checking algorithm improved
+
+v.1.8
+-bankroll stored in session
+-user specified wager
+
+v.1.7
+-bankroll added
+-4th ajax call added to stay click to update bankroll
+-all javascript moved into blackjax.js
+
+v.1.6
+-repeat card selection eliminated (or not, check bugs)
+-minor code cleanups
+
+v.1.5
+-database removed from application, hands are now stored in the session
+-score checking moved from game controller to hand model
+
+v.1.0
+-game is fully functional but dreadfully slow

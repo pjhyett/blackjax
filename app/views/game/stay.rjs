@@ -1,0 +1,10 @@
+page.replace_html 'dcards', :partial => 'dcards'
+page.replace_html 'dscore', @session[:dhand].score
+
+if @result != "You Push"
+	page.replace_html 'cash', sprintf("%.2f", session[:user].bankroll)
+	page.visual_effect :highlight, 'cash', :duration => 5
+end
+
+page.replace_html 'result', @result
+page.visual_effect :appear, 'result'

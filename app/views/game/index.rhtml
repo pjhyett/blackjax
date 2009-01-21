@@ -1,0 +1,35 @@
+<h4 class="heading">Dealer (stands at 17) - score: <span id="dscore"></span></h4>
+<span id="dcards">
+<img src="/images/deck/blank.gif" style="height:96px;width:71px;" /> 
+<img src="/images/deck/blank.gif" style="height:96px;width:71px;" />
+</span>
+<h4 class="heading">Player - score: <span id="score"></span></h4>
+<span id="cards">
+<img src="/images/deck/blank.gif" style="height:96px;width:71px;" /> 
+<img src="/images/deck/blank.gif" style="height:96px;width:71px;" />
+</span>
+<br/><br/>
+<center>
+<table><tr><td>
+<span id="hit">
+<%= form_remote_tag(:url => { :action => :hit },
+					:html => { :id => 'hit_form' },
+                    :loading => 'clicked()',
+                    :complete => 'hit_finished()') %>
+  <%= submit_tag("Hit", :id => 'hit-button') %>
+<%= end_form_tag %>
+</span>
+</td><td>
+<span id="stay">
+<%= form_remote_tag(:url => { :action => :stay },
+                    :html => { :id => 'stay_form' },
+                    :loading => 'clicked()',
+                    :complete => 'game_finished()') %>
+  <%= submit_tag("Stay", :id => 'stay-button') %>
+<%= end_form_tag %>
+</span>
+</td><td>
+<span id='busy' style="display:none"><%= image_tag "spinner.gif" %></span>
+</td></tr></table>
+<h2 id="result"></h2>
+</center>

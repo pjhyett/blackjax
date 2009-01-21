@@ -1,0 +1,44 @@
+body { background-color: #fff; color: #333; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+#container {
+	text-align:center;
+	width:610px;
+}
+
+#sidebar {
+	float:right;
+	width:150px;
+	border:1px solid #ccc;
+}
+
+#game_area {
+	text-align:center;
+	width:450px;
+	border:1px solid #ccc;
+}
+
+#result {
+	background:#ffff00;
+}
+
+.heading {
+	border-top:1px #eee solid;
+	border-bottom:1px #eee solid;
+	padding:5px;
+}
